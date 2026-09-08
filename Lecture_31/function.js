@@ -97,7 +97,7 @@ console.log("----------------Arrow Function--------------");
 console.log("The arrow function is kinda similar as function expression :");
 
 // Arrow function 
-// there is 3 syntax of arrow function declaration :
+// there are 3 types syntax of arrow function declaration :
 
 //syntax 1:
 // let added = num5 => num1 +4;
