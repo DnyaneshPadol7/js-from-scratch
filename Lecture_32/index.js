@@ -1,103 +1,199 @@
-// custom implementation 
-function convertToPositve(num) {
+```javascript
+// =========================================================
+// Custom Implementation
+// =========================================================
+
+function convertToPositive(num) {
     return num * -1;
 }
 
-let positiveNum = convertToPositve(-10)
+let positiveNum = convertToPositive(-10);
 console.log(positiveNum);
 
 console.log("---------------------------------------------------------");
 
 
-// built in implementation (abs stands for absolute)
-// using abs funstion
-let positiveNum2 =Math.abs(-30)
+// =========================================================
+// Built-in Implementation
+// Math.abs() returns the absolute (positive) value
+// =========================================================
+
+let positiveNum2 = Math.abs(-30);
 console.log(positiveNum2);
-console.log("---------------------------------------------------------");
-
-
-
-// predefined function of javaScript  
-console.log(Math.round(1.6));
-console.log(Math.round(4.3));
-console.log(Math.round(5.1));
-console.log(Math.round(2.68934784));
-console.log(Math.round(8.9));
-
-console.log(Math.ceil( 8.1)); // its increase the value by one no matter which value after the decimal point
-console.log(Math.floor(7.9)); // its decrease the value by one no matter which value after the decimal point
 
 console.log("---------------------------------------------------------");
 
-// let's try to build a dyce 
+
+// =========================================================
+// Predefined Math Functions in JavaScript
+// =========================================================
+
+// Math.round() -> rounds the number to the nearest integer
+console.log(Math.round(1.6));       // 2
+console.log(Math.round(4.3));       // 4
+console.log(Math.round(5.1));       // 5
+console.log(Math.round(2.68934784)); // 3
+console.log(Math.round(8.9));       // 9
+
+// Math.ceil() -> always rounds UP
+console.log(Math.ceil(8.1));        // 9
+
+// Math.floor() -> always rounds DOWN
+console.log(Math.floor(7.9));       // 7
+
+console.log("---------------------------------------------------------");
+
+
+// =========================================================
+// Let's Try to Build a Dice
+// =========================================================
 
 let max = 6;
 let min = 1;
 
-let result = Math.floor(Math.random()*(max-min+1))+min
+let result = Math.floor(Math.random() * (max - min + 1)) + min;
 
-console.log(result);
+console.log("Dice Result = " + result);
+
 console.log("---------------------------------------------------------");
 
-// Number object/function
-console.log("Learn Number Function : ");
-console.log("Is number.isFinite(777) ?");
-console.log("The Ans = "+Number.isFinite(777));
-console.log();  
+
+// =========================================================
+// Number Object / Functions
+// =========================================================
+
+console.log("Learn Number Functions:");
+
+console.log("Is Number.isFinite(777)?");
+console.log("The Answer = " + Number.isFinite(777));
+
 console.log("---------------------------------------------------------");
 
-console.log("This is char value but using parsInt Function we can convert it into interger value :");
+
+// =========================================================
+// Number.parseInt()
+// Converts a string into an integer
+// =========================================================
+
+console.log("Using parseInt(), we can convert a string into an integer:");
+
 console.log(Number.parseInt("56"));
+
 console.log("---------------------------------------------------------");
 
-console.log();
-console.log("Let's learn about to fix funtion ? it will removes the value after decimal");
-let num = 404.432323
-console.log(num.toFixed(8)); // we can give the refer value for how much decimal value we need.
+
+// =========================================================
+// toFixed()
+// Controls how many digits we want after the decimal point
+// =========================================================
+
+console.log("Let's learn about toFixed():");
+
+let num = 404.432323;
+
+console.log(num.toFixed(8));
+
 console.log("---------------------------------------------------------");
 
-console.log();
-console.log("There's also a similar function like toFixed which is toPricision");
+
+// =========================================================
+// toPrecision()
+// Controls the total number of significant digits
+// =========================================================
+
+console.log("Let's learn about toPrecision():");
+
 console.log(num.toPrecision(5));
 
-console.log();
-console.log("---------------------------------------------------------");
-console.log("Let's Learn String Function :");
 console.log("---------------------------------------------------------");
 
 
-console.log();
+// =========================================================
+// String Functions
+// =========================================================
+
+console.log("Let's Learn String Functions:");
+
+console.log("---------------------------------------------------------");
+
 let str = "Hello Boss";
 let email = "abc@gmail.com";
-console.log("this is sample text from this text we can search any thing with the help of .includes function = "+str+" "+email);
+
+console.log(
+    "This is sample text. We can search something using the .includes() function:"
+);
+
+console.log(str + " " + email);
+
 console.log(email.includes("gmail"));
 
-
-console.log();
 console.log("---------------------------------------------------------");
-console.log("Let's learn about endsWith Function");
+
+
+// =========================================================
+// endsWith()
+// Checks whether a string ends with a particular value
+// =========================================================
+
+console.log("Let's learn about endsWith():");
+
 let filename = "image.pdf";
-console.log("It increase the security of function or do checks for us "+filename);
+
+console.log("File name = " + filename);
+
+console.log(
+    "Checking whether the file is PDF or JPG:"
+);
+
 console.log(filename.endsWith(".pdf") || filename.endsWith(".jpg"));
-console.log();
 
-console.log("---------------------------------------------------------");
-console.log("There are plenty of functions you can go out and check it out : ");
 console.log("---------------------------------------------------------");
 
 
+// =========================================================
+// There are plenty of JavaScript functions.
+// Go ahead and explore them!
+// =========================================================
+
+console.log("There are plenty of JavaScript functions.");
+console.log("Go ahead and check them out!");
+
 console.log("---------------------------------------------------------");
-console.log("Now let's learn Date and Time Stamps :");
+
+
+// =========================================================
+// Date and Time
+// =========================================================
+
+console.log("Let's Learn Date and Time Stamps:");
+
 console.log("---------------------------------------------------------");
 
 let date = new Date();
+
+// Current date and time
 console.log(date);
 
-console.log(Date.now()); // to get current unix timestamp
+// Current Unix Timestamp
+console.log(Date.now());
 
+// Day of the week
 console.log(date.getDay());
+
+// Month
 console.log(date.getMonth());
+
+// Full year
 console.log(date.getFullYear());
+
+// Date in local format
 console.log(date.toLocaleDateString());
-console.log(date.toLocaleTimeString()); 
+
+// Time in local format
+console.log(date.toLocaleTimeString());
+
+// Date in readable format
 console.log(date.toDateString());
+
+console.log("---------------------------------------------------------");
+```
