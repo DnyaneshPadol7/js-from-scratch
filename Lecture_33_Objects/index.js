@@ -141,3 +141,78 @@ console.log("Let's do something using spread oprators");
 
 let {Price,ProductName, ...privateDetails} = product;
 console.log(Price, ProductName, privateDetails);
+
+console.log("==================================================================");
+// more practice of same 
+
+
+
+// console.log("Object Destructuring :");
+// let student = {
+//     name : "Dnyanesh",
+//     rollNo : 7,
+//     subject : ["math","English","Marathi"]
+// }
+
+// let {name,rollNo} = student
+// console.log(subject);
+// console.log("0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0");
+// let {...bhavi} = student
+// console.log(bhavi);
+// console.log("0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0");
+
+// console.log("for doing rename in the object");
+// // how to rename key
+// let {subject:language, ...variable} = student
+// // console.log(...subject);
+// console.log(...language);
+
+
+let mt15 = {
+    price : 2002000,
+    model : 2027,
+    color : "zBlack",
+    printColor : function () {
+        //console.log(this.color);
+    }
+    
+}
+
+// aaray of mt16
+let mt16 = [
+    ["price", 2002000],
+    ["model", 2027],
+    ["color", "zBlack"]
+];
+
+mt16.forEach(function(value,index){
+    console.log(value,index);
+})
+console.log("------------------------------");
+// we can fethc all the entries by for in loop usign this syntax !
+console.log("for in loop :");
+for(let key in mt15){
+    console.log(key,mt15[key]);
+}
+console.log("------------------------------");
+
+
+// for of loop works only for arrays it will not works on objects  
+// for (value of mt15){
+//     console.log(value);
+// }
+
+// if you want to fetch the data from objects through the for of loop you have to do some changes in for of loop as well
+
+for(let data of Object.entries(mt15)){
+    console.log(...data);
+}
+
+// mt15.printColor();
+// console.log(Object.entries(mt15));
+
+
+// console.log("-------------------------------------------------");
+// for (let [key,value]of Object.entries(mt15)){
+//     console.log(key,value);
+// }
