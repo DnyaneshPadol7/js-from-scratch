@@ -111,6 +111,9 @@ arr3.splice(3, 2, [4, 5]) // arr3 = (startIndex, deleteCount, [item1,item2]=> it
 console.log(arr3);
 
 
+
+
+
 console.log("-----------------------------------------------------------");
 console.log("now let's see for Slice :");
 // now let's see for Slice 
@@ -138,3 +141,18 @@ console.log("Anther way to find the value from an array");
 // this is another way to find value from an array 
 let re = arr6.find(num => num > 10);
 console.log(re);
+
+
+
+console.log("-----------------------------------------------------------");
+console.log("now let's see for FindIndex :");
+
+// it retuns us the index of the value 
+let resIndex = arr6.findIndex((value =>value === 18))
+console.log(resIndex);
+
+console.log("-----------------------------------------------------------");
+console.log("now let's see for Flat() :");
+// flat is an array method that converts a nested array into a single-level-array.
+let arr7 = [89,80,90,[89,56,["kapil","samay",[99.9,88.8,77.7,66.6,55.5],"girdhar"],56]]
+console.log(arr7.flat(Infinity)); //
