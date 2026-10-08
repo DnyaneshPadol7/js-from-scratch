@@ -235,3 +235,10 @@ console.log("It will print = " + (Number("5") + 4));
 // Number("5")   → 5
 // String(5)     → "5"
 // Boolean(1)    → true
+
+
+// added some line of code 
+console.log(!!!""); // it will print true
+console.log(!!0); // it will print false
+console.log(!!"0"); // it will print true
+console.log(!![]); // this will print true
